@@ -6,7 +6,10 @@
   "author": "(Brett Nelson <brett@justsomeapps.com>)",
   "private": true,
   "scripts": {
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "nuxt": "^2.2.0"
