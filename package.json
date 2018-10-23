@@ -1,0 +1,14 @@
+{
+  "name": "butterfly-house",
+  "version": "0.0.1",
+  "description": "Home page for BUTTERFLY HOUSE http://butterflyhousescf.org/",
+  "repository": "test.git",
+  "author": "(Brett Nelson <brett@justsomeapps.com>)",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^2.2.0"
+  }
+}
