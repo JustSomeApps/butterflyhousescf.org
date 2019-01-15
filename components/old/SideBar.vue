@@ -1,114 +1,113 @@
 <template>
-    <div id="sidebar1">
-        <!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
-        <ul id="ButterflyMenuBar" class="MenuBarVertical">
-            <li>
-                <a href="/">Home Page</a>
-            </li>
-            <li>
-                <a
-                    href="#"
-                    @mousemove="welcomeOpen = true"
-                    @mouseleave="welcomeOpen = false"
-                    :class="[ welcomeOpen ? 'MenuBarItemSubmenuHover': '', 'MenuBarItemSubmenu' ]"
-                >Welcome</a>
-                <ul :class="{'MenuBarSubmenuVisible': welcomeOpen}">
-                    <li>
-                        <a href="/application">Application</a>
-                    </li>
-                    <li>
-                        <a href="/rules">Rules and Expectations</a>
-                    </li>
-                    <li>
-                        <a href="/photo-gallery">Photo Gallery</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="/madam">Moms &amp; Dads against Meth</a>
-            </li>
-            <li>
-                <a href="/links">Links</a>
-            </li>
-            <li>
-                <a
-                    href="#"
-                    @mousemove="testimonialsOpen = true"
-                    @mouseleave="testimonialsOpen = false"
-                    v-bind:class="[ testimonialsOpen ? 'MenuBarItemSubmenuHover': '', 'MenuBarItemSubmenu' ]"
-                >Testimonials</a>
-                <ul :class="{'MenuBarSubmenuVisible': testimonialsOpen}">
-                    <li>
-                        <a href="/testimonials">Testimonials page 1</a>
-                    </li>
-                    <li>
-                        <a href="/testimonials2">Testimonials page 2</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="/newsletter">Newsletter</a>
-            </li>
-            <li>
-                <a href="/contact-us">Contact and Support</a>
-            </li>
+  <div id="sidebar1">
+    <!-- #BeginLibraryItem "/Library/Navigation.lbi" -->
+    <ul id="ButterflyMenuBar" class="MenuBarVertical">
+      <li>
+        <a href="/">Home Page</a>
+      </li>
+      <li>
+        <a
+          href="#"
+          @click="welcomeOpen = !welcomeOpen"
+          :class="[ welcomeOpen ? 'MenuBarItemSubmenuHover': '', 'MenuBarItemSubmenu' ]"
+        >Welcome</a>
+        <ul :class="{'MenuBarSubmenuVisible': welcomeOpen}">
+          <li>
+            <a href="/application">Application</a>
+          </li>
+          <li>
+            <a href="/rules">Rules and Expectations</a>
+          </li>
+          <li>
+            <a href="/photo-gallery">Photo Gallery</a>
+          </li>
         </ul>
-        <!-- #EndLibraryItem -->
-        <h3 align="center">
-            <em>A place of hope and healing</em>
-        </h3>
-        <p align="center">
-            <a href="/newsletter">Read our Newsletters</a>
-        </p>
-        <p align="center" class="style4">
-            <a href="https://www.facebook.com/soberliving.butterfly">
-                <img src="~/static/images/facebook.png" width="64" height="64" alt="">
-            </a>
-        </p>
-        <div class="paypal">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="YGUX7UUK68NAS">
-                <input
-                    type="image"
-                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-                    border="0"
-                    name="submit"
-                    alt="PayPal - The safer, easier way to pay online!"
-                >
-                <img
-                    alt=""
-                    border="0"
-                    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-                    width="1"
-                    height="1"
-                    hidden
-                    style="display: none !important;"
-                >
-            </form>
-        </div>
-        <p align="center" class="style3">&nbsp;</p>
-        <p align="center">&nbsp;</p>
-        <p align="center">
-            <a href="~/static/Recipe for Monarch Butterflies.pdf">Recipe for
-                <br>Monarch Butterflies
-            </a>
-        </p>
-        <p align="center">&nbsp;</p>
-        <p>
-            <img
-                src="~/static/images/butterfly_plant.png"
-                alt="Butterfly House Butterfly on Plant"
-                width="135"
-                height="115"
-            >
-        </p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+      </li>
+      <li>
+        <a href="/madam">Moms &amp; Dads against Meth</a>
+      </li>
+      <li>
+        <a href="/links">Links</a>
+      </li>
+      <li>
+        <a
+          href="#"
+          @mousemove="testimonialsOpen = true"
+          @mouseleave="testimonialsOpen = false"
+          v-bind:class="[ testimonialsOpen ? 'MenuBarItemSubmenuHover': '', 'MenuBarItemSubmenu' ]"
+        >Testimonials</a>
+        <ul :class="{'MenuBarSubmenuVisible': testimonialsOpen}">
+          <li>
+            <a href="/testimonials">Testimonials page 1</a>
+          </li>
+          <li>
+            <a href="/testimonials2">Testimonials page 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/newsletter">Newsletter</a>
+      </li>
+      <li>
+        <a href="/contact-us">Contact and Support</a>
+      </li>
+    </ul>
+    <!-- #EndLibraryItem -->
+    <h3 align="center">
+      <em>A place of hope and healing</em>
+    </h3>
+    <p align="center">
+      <a href="/newsletter">Read our Newsletters</a>
+    </p>
+    <p align="center" class="style4">
+      <a href="https://www.facebook.com/soberliving.butterfly">
+        <img src="~/static/images/facebook.png" width="64" height="64" alt>
+      </a>
+    </p>
+    <div class="paypal">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="YGUX7UUK68NAS">
+        <input
+          type="image"
+          src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+          border="0"
+          name="submit"
+          alt="PayPal - The safer, easier way to pay online!"
+        >
+        <img
+          alt
+          border="0"
+          src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+          width="1"
+          height="1"
+          hidden
+          style="display: none !important;"
+        >
+      </form>
     </div>
+    <p align="center" class="style3">&nbsp;</p>
+    <p align="center">&nbsp;</p>
+    <p align="center">
+      <a href="~/static/Recipe for Monarch Butterflies.pdf">Recipe for
+        <br>Monarch Butterflies
+      </a>
+    </p>
+    <p align="center">&nbsp;</p>
+    <p>
+      <img
+        src="~/static/images/butterfly_plant.png"
+        alt="Butterfly House Butterfly on Plant"
+        width="135"
+        height="115"
+      >
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
 </template>
 
 <script>
