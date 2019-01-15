@@ -32,8 +32,7 @@
       <li>
         <a
           href="#"
-          @mousemove="testimonialsOpen = true"
-          @mouseleave="testimonialsOpen = false"
+          @click="welcomeOpen = !welcomeOpen"
           v-bind:class="[ testimonialsOpen ? 'MenuBarItemSubmenuHover': '', 'MenuBarItemSubmenu' ]"
         >Testimonials</a>
         <ul :class="{'MenuBarSubmenuVisible': testimonialsOpen}">
